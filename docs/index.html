@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Objectif</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0ed9bd2acf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <span class="box2">
+            <button id="bouton"><a href="#aside"><i class="fa-solid fa-bars"></i></a></button>
+            <h1>Objectif</h1>
+        </span>
+        <span class="box3">
+            <button><i class="fa-solid fa-user"></i></button>
+        </span>
+    </header>
+    <aside id="aside">
+        <ul>
+            <li class="Objectif"><i class="fa-solid fa-bullseye"></i><h1>Objectif</h1><p class="fa-solid fa-arrow-right"></p></li>
+            <li class="Brainstorming"><i class="fa-solid fa-brain"></i><h1>Brainstorming</h1><p class="fa-solid fa-arrow-right"></p></li>
+            <li class="Dossier"><i class="fa-regular fa-folder"></i><h1>Document</h1><p class="fa-solid fa-arrow-right"></p></li>
+        </ul>
+        <div><i class="fa-solid fa-gear"></i><h1>Mon Compte</h1><p class="fa-solid fa-arrow-right"></p></div>
+    </aside>
+    <div class="favorie">
+        <iframe src="Index/fav.html" width="100%" height="100%"></iframe>
+    </div>
+    <main>
+        <div class="content1">
+            <button id="Add">Add</button>
+        </div>
+        <div id="Back">
+            <div id="PopUp">
+                <div>
+                    <ul>
+                        <li><input type="text" placeholder="Nom"></li>
+                        <li><input type="text" placeholder="Description"></li>
+                        <li><input type="text" placeholder="Image URL"></li>
+                        <li><input type="date" placeholder="Date de fin"></li>
+                        <li><input type="date" placeholder="Date de debut"></li>
+                        <li><button id="Cancel">Cancel</button><button id="Add2">Add</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="BackFil" style="display: none;">
+            <div id="PopUpFil">
+                <div>
+                    <ul>
+                        <li>
+                            <button class="Fbutton" onclick="sortBoxes('title-asc'); closePopup();">A-Z</button>
+                            <button class="Fbutton" onclick="sortBoxes('title-desc'); closePopup();">Z-A</button>
+                        </li>
+                        <li>
+                            <button class="Fbutton" onclick="sortBoxes('start-date-asc'); closePopup();">Date de début la plus proche</button>
+                            <button class="Fbutton" onclick="sortBoxes('start-date-desc'); closePopup();">Date de début la plus loin</button>
+                        </li>
+                        <li>
+                            <button class="Fbutton" onclick="sortBoxes('end-date-asc'); closePopup();">Date de fin la plus proche</button>
+                            <button class="Fbutton" onclick="sortBoxes('end-date-desc'); closePopup();">Date de fin la plus loin</button>
+                        </li>
+                    </ul>
+                    <button id="CancelFil">Annuler</button>
+                </div>
+            </div>
+        </div>
+        <div id="BackDet" class="backdrop">
+            <div id="PopUpDet">
+                <div class="OUI">
+                    <form id="editForm">
+                        <ul>
+                            <li><input type="text" id="editTitle" name="editTitle"></li>
+                            <li><textarea type="text" id="editDesc" name="editDesc" rows="10" cols="50" placeholder="Entrez votre déscription ici..."></textarea></li>
+                            <li><input type="date" id="editStart" name="editStart"><input type="date" id="editEnd" name="editEnd"></li>
+                            <li><input type="text" id="editImage" placeholder="Image URL"></li>
+                            <li>
+                                <div id="fileUploader">
+                                    <div class="addFileDiv" onclick="openFileChooser()">Ajouter un fichier</div>
+                                    <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx" style="display: none;">
+                                    <div id="fileList"></div>
+                                </div>
+                            </li>
+                            <li><button type="submit">Sauvegarder</button><button id="CancelDet">Annuler</button></li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="line"></div>
+        <div class="space"></div>
+        <div class="article2">
+            <div class="container1">
+                <input type="text" placeholder="What are you looking for?"><button>Search</button>
+            </div>
+        </div>
+        <div class="article3">
+            <div class="content2">
+                <button id="filtre">Filtre</button>
+            </div>
+        </div>
+        <article>
+        </article>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
+ 
